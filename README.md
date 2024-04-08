@@ -1,2 +1,2 @@
-# extracci-n_de_datos
+# extraccion_de_datos
 Practica 1

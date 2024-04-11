@@ -10,7 +10,8 @@ filtro1.to_csv("practica_facturacion_1.csv")
 filtro2 = df[~(df["CVE_VEND"] == 5.0 ) & ~(df["CVE_VEND"] == 4.0)]
 print(filtro2)
 
-filtro3=df[df["FECHA_ENT"] == '2022-28-2']
+df['FECHAELAB'] = pd.to_datetime(df['FECHAELAB'])
+filtro3=df[df["FECHAELAB"].dt.strftime('%Y-%m-%d') == '2019-10-02']
 print(filtro3)
 
 filtro4=df[(df["CAN_TOT"] < 5951.7)| (df["STATUS"] == "E")]
